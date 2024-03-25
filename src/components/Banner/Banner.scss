@@ -1,0 +1,46 @@
+.Banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 20px auto;
+    h1 {
+      position: absolute;
+      z-index: 1;
+      color: white;
+    }
+    &_title {
+      position: absolute;
+      z-index: 1;
+      color: white;
+      font-size: 28px;
+    }
+    img {
+      position: relative;
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+      border-radius: 25px;
+      filter: brightness(60%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .Banner {
+      width: 100%;
+      margin: 0;
+      justify-content: start;
+      h1 {
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 32px;
+        width: 80%;
+        padding: 27px;
+      }
+      &_title {
+        width: 65%;
+        padding-left: 1rem;
+      }
+    }
+  }
+  
