@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import "./Gallery.scss";
@@ -7,13 +7,16 @@ const angleLeft = <FontAwesomeIcon icon={faAngleLeft} />;
 const angleRight = <FontAwesomeIcon icon={faAngleRight} />;
 
 const Gallery = (props) => {
+  const containerRef =useRef() ;
   const [slideIdx, setSlideIdx] = useState(0);
   const imgSize = () => {
-    const slideshowImg = document.querySelector(".slideshow_container img");
+   
+    const slideshowImg = containerRef.current;
     if (!slideshowImg) {
       return 0;
     }
-    return slideshowImg.width;
+    
+    return slideshowImg.clientWidth;
   };
 
   const onNext = () => {
@@ -39,6 +42,7 @@ const Gallery = (props) => {
       }
     >
       <div
+        ref={containerRef}
         className="slideshow_container"
         style={{ transform: `translateX(-${slideIdx * imgSize()}px)` }}
       >
@@ -67,11 +71,7 @@ const Gallery = (props) => {
           </div>
         </>
       )}
-      {/* {props.img.length === 1 && (
-        <>
-          <div className="slideshow_1"></div>
-        </>
-      )} */}
+      
     </div>
   );
 };

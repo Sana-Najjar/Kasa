@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .about_collapses {
+        width: 98%;
+        margin-top: 1.7rem;
+    }
+}
+
+.about {
+    &_collapses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem;
+        &_content {
+            margin-bottom: 0.5rem;
+            width: 95%;
+            color: #000;
+        
+        }
+    }
+}

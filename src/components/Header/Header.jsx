@@ -34,7 +34,7 @@ const Header = () => {
               }
               title="À propos"
               end
-              to="/APropos"
+              to="/about"
             >
               A propos
             </NavLink>

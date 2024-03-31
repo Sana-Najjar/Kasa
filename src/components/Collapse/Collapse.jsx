@@ -13,13 +13,9 @@ const Collapse = ({ title, content }) => {
 
   return (
     <>
-      <div onClick={openTabHandler} className="collapse_header">
+      <div onClick={openTabHandler} className={`collapse_header ${openTab ? 'open':""}`}>
         <h2 className="collapse_header_title">{title}</h2>
-        {!openTab ? (
-          <FontAwesomeIcon icon={faAngleDown} />
-        ) : (
-          <FontAwesomeIcon icon={faAngleUp} />
-        )}
+        <FontAwesomeIcon icon={openTab ? faAngleUp : faAngleDown} className="collapse_header_icon" />
       </div>
       {openTab && <div className="collapse_content">{content}</div>}
     </>
