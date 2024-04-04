@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     .about_collapses {
-        width: 98%;
+       
         margin-top: 1.7rem;
     }
 }
@@ -10,13 +10,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        padding-left: 55px;
+        padding-right: 55px;
         margin-top: 1.5rem;
         &_content {
             margin-bottom: 0.5rem;
             width: 95%;
             color: #000;
-        
+            
         }
     }
 }

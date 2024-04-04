@@ -19,7 +19,6 @@ const Header = () => {
                   : "header_nav_link_navlink header_nav_link_inactive"
               }
               title="Accueil"
-              end
               to="/"
             >
               Accueil
@@ -33,7 +32,6 @@ const Header = () => {
                   : "header_nav_link_navlink header_nav_link_inactive"
               }
               title="À propos"
-              end
               to="/about"
             >
               A propos
